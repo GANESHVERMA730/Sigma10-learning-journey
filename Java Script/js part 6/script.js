@@ -196,7 +196,6 @@ let greet1 = function () {
 }
 
 multipleGreet(greet1, 16);
-
 // higher order function (return)
 let odd = function (n) {
   console.log(!(n % 2 == 0));
@@ -226,21 +225,101 @@ function oddOrEvenFactory(request) {
 
 let request = "odd";
 
+// methods
+const calculator = {
+  num: 55,
+  add: function (a, b) {
+    return a + b;
+  },
+  sub: function (a, b) {
+    return a - b;
+  },
+  mul: function (a, b) {
+    return a * b;
+  }
+}
+
+// shorthand for method 
+
+// const calculator1 = {
+//   add(a, b) {
+//     return a + b;
+//   },
+//   sub(a, b) {
+//     return a - b;
+//   }
+// }
+
+// Practice questions part 6
+// Qs1.Write a JavaScript function that returns array elements larger than a number.
+let arr = [4, 5, 8, 2, 0, 4, 1, 6, 9, 3, 7];
+let num = 5;
+
+function getElements(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > num) {
+      console.log(arr[i]);
+    }
+  }
+}
+getElements(arr, num);
+
+// Qs2.Write a JavaScript function to extract unique characters from a string.
+let str1 = "abcdabcdefgggh";
+function getUnique(str) {
+  let ans = "";
+  for (let i = 0; i < str1.length; i++) {
+    let currChar = str1[i];
+    if (ans.indexOf(currChar) == -1) {
+      ans += currChar;
+    }
+  }
+  return ans;
+}
+console.log(getUnique(str1));
+
+// Qs3. Write a JavaScript function that accepts a list ofcountry names as input and returns the longest country name as output.
+let city = ["lucknow", "nepalgunj", "delhi", "banarash", "basti", "ayodhya"];
+function longestcity(city) {
+  let ansidx = 0;
+  for (let i = 0; i < city.length; i++) {
+    let anslen = city[ansidx].length;
+    let currlen = city[i].length;
+    if (currlen > anslen) {
+      ansidx = i;
+    }
+  }
+  return city[ansidx];
+}
+console.log(longestcity(city));
 
 
+// Qs4.Write a JavaScript function to count the number of vowels in a String argument.
+let str2 = "apnacollage";
+function countVowels(str2) {
+  let count = 0;
+  for (let i = 0; i < str2.length; i++) {
+    if (
+      str2.charAt(i) == "a" ||
+      str2.charAt(i) == "e" ||
+      str2.charAt(i) == "i" ||
+      str2.charAt(i) == "o" ||
+      str2.charAt(i) == "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels(str2));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Qs5.Write a JavaScript function to generate a random number within a range (start,end).
+let start = 100;
+let end = 200;
+function generateRandom(start, end) {
+  let diff = end - start;
+  return Math.floor(Math.random() * diff) + start;
+}
+console.log(generateRandom(start, end));
 
 
