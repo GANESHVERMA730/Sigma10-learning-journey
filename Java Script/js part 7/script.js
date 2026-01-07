@@ -84,3 +84,65 @@ const students = {
     return this.marks;
     },
 };
+
+// practice questions 
+const square = (n) => {
+  return n*n;
+};
+
+let id1 = setInterval(()=>{
+  console.log("aur batao sab thik??");
+}, 2000);
+
+setTimeout(()=>{
+  clearInterval(id1);
+  console.log("clear interval run");
+}, 10000);
+
+// JS(Part7) PracticeQuestions
+// Qs1. Write an arrow function named array Average that accepts an array of numbers and returns the average of those numbers.
+
+let arr = [1, 2, 3, 4, 5, 6];
+const arrayAverage = (arr) => {
+  let total = 0;
+  for (let number of arr){
+    total += number;
+  }
+  return total/arr.length;
+};
+console.log(arrayAverage(arr));
+
+// Qs2.Write an arrow function named isEven() that takes a single number as argument and returns if it is even or not.
+let num = 4;
+const isEven = (num) => num % 2 == 0;
+console.log(isEven(num));
+
+
+// Qs3. What is the output of the following code:
+const object = {
+  message: 'Hello Duniya',
+  logMessage(){
+    console.log(this.message);
+  }
+};
+setTimeout(object.logMessage, 1000);
+
+// Qs4. What is the output of the following code:
+let length = 4;
+function callback (){
+  console.log(this.length);
+}
+const object1 = {
+  length: 5,
+  method(callback){
+    callback();
+  },
+};
+
+object1.method(callback, 1, 2);
+
+
+
+
+
+
