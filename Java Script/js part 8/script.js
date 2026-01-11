@@ -118,7 +118,7 @@ console.log(sum(3));
 console.log(sum(1, 7));
 
 // spread operator(...)
-let array = [1,4,5,3,7,9,0];
+let array = [1, 4, 5, 3, 7, 9, 0];
 console.log(Math.min(...array));
 console.log(...array);
 
@@ -127,7 +127,7 @@ console.log(...myName);
 
 
 // with Array Literals
-let arr0 = [1,2,3,4,5];
+let arr0 = [1, 2, 3, 4, 5];
 let newArray = [...arr0];
 console.log(newArray);
 newArray.push(6);
@@ -140,25 +140,72 @@ const data = {
   password: "abcd320"
 };
 
-const dataCopy = {...data, id: 130};
+const dataCopy = { ...data, id: 130 };
 console.log(data);
 console.log(dataCopy);
 console.log(data);
 
+// rest
+function sum(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log("you gave us :", args[i]);
+  }
+}
 
+function sum1(...args) {
+  return args.reduce((sum1, el) => sum + el);
+}
 
+// destructuring for array
+let names = ["bibek", "rahul", "krishna", "kuldeep", "tushar", "raj", "rakesh"];
+let [me, bro] = names;
+console.log(me, bro);
 
+// destructuring for objects
+const student = {
+  name: "tushar",
+  age: 26,
+  class: 13,
+  subjects: ["chinrai", "laundanach", "gundai", "chut"],
+  username: "laudasur123",
+  password: "chut",
+};
+// let {username, password } = student;
+let { username: admi, password: pass, city: pata = "chutpur" } = student;
 
+// Practice Question part 8
+// Qs1. Square and sum the array elements using the arrow function and then find the average of the array.
 
+let arrays = [1, 2, 4, 5, 6, 8];
 
+const square = arrays.map((num) => num * num);
+console.log(square);
 
+let summ = square.reduce((acc, cur) => acc + cur, 0);
 
+let avg = summ / square.length;
+console.log(avg);
 
+// Qs2. Create a new array using the map function whose each element is equal to the original element plus 5.
+let newarr = [1, 4, 5, 8, -3, -9];
+console.log(newarr.map((newarr) => newarr + 5));
 
+// Qs3.Create a new array whose elements are in uppercase of words present in the original array.
+let cases = ["hamka lagat hai wo dai"];
+console.log(cases.map((cases) => cases.toUpperCase()));
 
+// Qs4.Write a function called double And ReturnArgs which accepts an array and a variable number of arguments. The function should return a new array with the original array values and all of the additional arguments doubled.
+function doubleAndReturnArgs(arr, ...args){
+  let doubledArr = arr.map(num => num * 2);
+  let doubledArgs = args.map(num => num * 2);
 
+  return [...doubledArr, ...doubledArgs];
+}
+console.log(doubleAndReturnArgs([1, 2, 3], 4, 5));
 
-
+// Qs5. Write a function called merge Objects that accepts two objects and returns a new object which contains all the keys and values of the first object and second object.
+const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
+mergeObjects({a: 1, b: 2}, {c: 3, d: 4});
 
 
 
