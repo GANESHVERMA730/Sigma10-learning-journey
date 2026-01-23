@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Bibek Verma</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+        <div class="navbar-nav">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Education</a>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <br />
+
+    <div class="container">
+      <h2>Bootstrap Demo</h2>
+      <div class="card" style="width: 18rem">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card’s content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+        aspernatur mollitia ipsum fugiat inventore reiciendis error
+        perspiciatis, architecto molestias. A magni explicabo dolorem quam
+        libero maxime debitis illum asperiores incidunt. Autem nesciunt
+        molestiae quo possimus officia quasi sit ipsum quia voluptatem saepe
+        atque provident repudiandae enim qui, adipisci quaerat cupiditate quis
+        sed illo ab laborum. Ducimus totam dolore assumenda minima. Minima rem
+        aliquam pariatur totam distinctio veniam, suscipit possimus velit.
+        Blanditiis sed unde eaque omnis, expedita porro magnam nostrum tempore
+        ad voluptate incidunt. Quam earum, eius autem voluptas qui ratione? Eius
+        quis reprehenderit aperiam praesentium odit quae non nobis sit cum
+        provident obcaecati quaerat voluptatibus corrupti pariatur nulla illum
+        ipsum est ratione nihil accusantium, incidunt a. Maxime libero minima
+        quos? Repudiandae quis quod molestiae alias, exercitationem perferendis
+        ex perspiciatis praesentium, omnis temporibus quia quae magnam
+        reprehenderit, culpa quibusdam excepturi ipsum distinctio unde? Magni
+        sit sapiente maiores itaque neque ipsa autem.
+      </p>
+
+      <div class="container">
+        <h2>Grid System</h2>
+        <div class="row">
+          <div class="col-md-4 bg-danger">one</div>
+          <div class="col-md-5 bg-success">two</div>
+          <div class="col-md-3 bg-primary">three</div>
+        </div>
+      </div>
+      <br />
+
+      <div class="row align-items-center">
+        <div class="col bg-success">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          voluptatum aut voluptates ea officiis, dolorum rerum, similique quia
+          laboriosam fugit animi nostrum cum. Quidem repudiandae odit rerum ut
+          temporibus dicta error aliquid, qui ipsum.
+        </div>
+        <div class="col bg-warning">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          atque consectetur maxime corrupti id. Labore, aut animi. Natus labore
+          perferendis nihil, saepe inventore dolor ab minus aperiam, libero
+          cumque voluptatibus, illo similique nobis sit cupiditate quis vero ad
+          harum ducimus tenetur magnam optio? Libero voluptas quibusdam itaque
+          consectetur officia eos. Iusto aperiam voluptatibus culpa dolorum
+          nostrum quas et aliquid optio eligendi! Ex corrupti officiis at quos
+          optio ullam commodi omnis.
+        </div>
+        <div class="col bg-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          voluptatum aut voluptates ea officiis, dolorum rerum, similique quia
+          laboriosam fugit animi nostrum cum. Quidem repudiandae odit rerum ut
+          temporibus dicta error aliquid, qui ipsum.
+        </div>
+        <div class="col bg-danger align-self-start">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          voluptatum aut voluptates ea officiis, dolorum rerum, similique quia
+          laboriosam fugit animi nostrum cum. Quidem repudiandae odit rerum ut
+          temporibus dicta error aliquid, qui ipsum.
+        </div>
+      </div>
+
+      <button class="btn btn-danger">btn one</button>
+      <button class="btn btn-outline-success">btn two</button>
+      <button class="btn btn-warning">btn one</button>
+      <button class="btn btn-outline-info">btn one</button>
+      <button class="btn btn-primary">btn one</button>
+      <br />
+      <span class="badge bg-danger">45+</span>
+      <br /><br />
+      <button class="btn btn-primary">
+        Followers
+        <span class="badge bg-secondary">100+</span>
+      </button>
+
+      <button type="button" class="btn btn-primary position-relative">
+        Inbox
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        >
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+
+      <br /><br />
+      <div class="alert alert-danger">Download Failed! Please try again.</div>
+      <div class="alert alert-success alert-dismissible">
+        Congratulations! your score is 50/50
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+    </div>
+
+    <br /><br />
+    <div class="container">
+      <h2>Form Demo</h2>
+      <form class="md-3">
+        <label class="form-lable" for="Email">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email"
+          id="Email"
+        />
+        <br />
+        <label class="form-lable" for="password">password</label>
+        <input type=password" class="form-control" placeholder="password"
+        id="password">
+        <br />
+
+        <div class="mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="normal mb-3">
+          <label for="agree">Agree</label>
+          <input type="checkbox" id="agree" />
+        </div>
+        <!-- starting -->
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkDefault"
+          />
+          <label class="form-check-label" for="checkDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkChecked"
+            checked
+          />
+          <label class="form-check-label" for="checkChecked">
+            Checked checkbox
+          </label>
+        </div>
+        <!-- ending -->
+
+        <!-- radio -->
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="radioDefault"
+            id="radioDefault1"
+          />
+          <label class="form-check-label" for="radioDefault1">
+            Default radio
+          </label>
+        </div>
+
+        <!-- switches  (different form of checkbox) -->
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="switchCheckDefault"
+          />
+          <label class="form-check-label" for="switchCheckDefault"
+            >Default switch checkbox input</label
+          >
+        </div>
+      </form>
+    </div>
+
+    <br /><br />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

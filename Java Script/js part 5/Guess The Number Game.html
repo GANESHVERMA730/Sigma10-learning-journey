@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess The Number Game</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      color: #fff;
+    }
+
+    .game-box {
+      background: #1e1e2f;
+      padding: 25px;
+      border-radius: 10px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5563d6;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="game-box">
+    <h1>Guess the Number 🎯</h1>
+
+    <input type="number" id="maxNumber" placeholder="Enter max number">
+    <button onclick="startGame()">Start Game</button>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess" disabled>
+    <button onclick="checkGuess()" disabled id="guessBtn">Guess</button>
+
+    <p class="message" id="message"></p>
+  </div>
+
+  <script>
+    let randomNumber;
+
+    function startGame() {
+      const max = document.getElementById("maxNumber").value;
+
+      if (max === "" || max <= 0) {
+        document.getElementById("message").innerText = "Please enter a valid max number!";
+        return;
+      }
+
+      randomNumber = Math.floor(Math.random() * max) + 1;
+
+      document.getElementById("guessInput").disabled = false;
+      document.getElementById("guessBtn").disabled = false;
+      document.getElementById("message").innerText = "Game started! Make a guess 👇";
+
+      console.log("Random Number:", randomNumber); // for testing
+    }
+
+    function checkGuess() {
+      const guess = document.getElementById("guessInput").value;
+
+      if (guess === "") {
+        document.getElementById("message").innerText = "Please enter a number!";
+        return;
+      }
+
+      if (guess == randomNumber) {
+        document.getElementById("message").innerText =
+          "🎉 Correct! The number was " + randomNumber;
+      } else if (guess < randomNumber) {
+        document.getElementById("message").innerText =
+          "📉 Too small! Try again.";
+      } else {
+        document.getElementById("message").innerText =
+          "📈 Too large! Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>

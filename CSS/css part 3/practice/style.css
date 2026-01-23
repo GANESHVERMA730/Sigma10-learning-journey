@@ -1,0 +1,22 @@
+div {
+  height: 150px;
+  width: 300px;
+  background-color: yellowgreen;
+  border: 5px dotted rgb(255, 251, 0);
+  margin: 20px 1em 40px 2em;
+  padding: 1em;
+  font-weight: bold;
+  font-size: large;
+}
+.box{
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+li{
+  display: inline;
+}
