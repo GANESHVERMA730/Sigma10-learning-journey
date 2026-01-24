@@ -2,7 +2,7 @@
 <html>
   <head>
     <style>
-     /* css code here */
+      /* css code here */
     </style>
   </head>
 
@@ -10,8 +10,18 @@
     <h1>use of 'this' in event Listeners</h1>
     <h3>Let's demo it in elements</h3>
     <p>This is a sample paragraph to preactice this in event Listeners</p>
-    <button id="btn">Click</button>
-
+    <button>Click</button>
+    <button class="btn2">hello btn2</button>
+    <input placeholder="type something" type="text" />
+    <input class="inp2" placeholder="type something" />
+    <form action="/action">
+      <input class="username" placeholder="username"/>
+      <input class="pass" type="password" placeholder="password">
+      <button>Register</button>
+    </form>
+    <h1>My Text Editor</h1>
+    <p class="paragraph" ></p>
+    <input type="text" placeholder="type something" id="text">
 
     <!-- js code -->
     <script>
@@ -23,12 +33,91 @@
       function changeColor() {
         console.dir(this.innerText);
         this.style.backgroundColor = "blue";
-      };
+      }
 
       btn.addEventListener("click", changeColor);
       p.addEventListener("click", changeColor);
       h1.addEventListener("click", changeColor);
       h3.addEventListener("click", changeColor);
+
+      let btn2 = document.querySelector(".btn2");
+
+      // btn2.addEventListener("click", function(event){
+      //   console.log("button clicked");
+      //   console.log("button clicked");
+      // });
+
+      btn2.addEventListener("dblclick", function (event) {
+        console.log(event);
+        console.log("button clicked");
+      });
+
+      let inp = document.querySelector("input");
+
+      inp.addEventListener("keydown", function (event) {
+        console.log("key = ", event.key);
+        console.log("code =", event.code);
+        console.log("key was pressed");
+      });
+
+      // inp.addEventListener("keyup", function(){
+      //   console.log("key was relesed")
+      // });
+
+      let inp2 = document.querySelector(".inp2");
+
+      inp2.addEventListener("keydown", function (event) {
+        console.log("code =", event.code);
+
+        if (event.code === "ArrowUp") {
+          console.log("character moves forward");
+        } else if (event.code === "ArrowDown") {
+          console.log("character moves backward");
+        } else if (event.code === "ArrowLeft") {
+          console.log("character moves left");
+        } else if (event.code === "ArrowRight") {
+          console.log("character moves right");
+        }
+      });
+
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", function(event){
+        event.preventDefault();
+        // console.dir(form)
+        
+        // let inp = this.elements[0]; // = form.elements[0]
+        // let pass = this.elements[1];
+        // or
+        // let inp = document.querySelector(".username");
+        // let pass = document.querySelector(".pass");
+
+        // console.log(inp.value);
+        // console.log(pass.value);
+
+        // alert(`Hi ${inp.value}, your password is set to ${pass.value}`)
+      });
+      let user = document.querySelector(".username");
+
+        user.addEventListener("change", function(){
+          console.log("change event");
+          console.log("final value = ", this.value);
+        });
+
+        user.addEventListener("input", function(){
+          console.log("input event");
+          console.log("final value = ", this.value);
+        });
+
+        let text = document.querySelector("#text");
+        let paragraph = document.querySelector(".paragraph");
+
+        text.addEventListener("input", function(){
+          console.log(text.value);
+          paragraph.innerText = text.value;
+        });
+
+
     </script>
   </body>
 </html>
