@@ -58,13 +58,13 @@ function changeColor(color, delay) {
 }
 
 async function demo() {
-  try{
-  await changeColor("red", 1000);
-  await changeColor("yellow", 1000);
-  await changeColor("green", 1000);
-  await changeColor("purple", 1000);
-  await changeColor("blue", 1000);
-  }catch(err){
+  try {
+    await changeColor("red", 1000);
+    await changeColor("yellow", 1000);
+    await changeColor("green", 1000);
+    await changeColor("purple", 1000);
+    await changeColor("blue", 1000);
+  } catch (err) {
     console.log("error caught");
     console.log(err);
   }
@@ -86,3 +86,72 @@ let student = {
   name: "bibek",
   marks: 67,
 };
+
+// our first request >> using Fetch(url)
+let url = "https://catfact.ninja/fact";
+
+fetch(url)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log("data1 = ", data.fact);
+    return fetch(url);
+  })
+  .then((response) => {
+    return response.json();
+  })
+  .then((data2) => {
+    console.log("data2 = ", data2.fact);
+  })
+  .catch((err) => {
+    console.log("ERROR - ", err);
+  });
+
+console.log("this is asynchronous");
+
+// using fetch with async/await
+// async function getFacts() {
+//   try {
+//     let response1 = await fetch(url);
+//     let data1 = await response1.json();
+//     console.log(data1.fact);
+
+//     let response2 = await fetch(url);
+//     let data2 = await response2.json();
+//     console.log(data2.fact);
+//   } catch (e) {
+//     console.log("error = ", e);
+//   }
+// }
+
+async function getFacts(){
+  try{
+    let response = await axios.get(url);
+    console.log(response.data.fact );
+  }catch (e){
+    console.log("error - ", e);
+  }
+}
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", async ()=>{
+  let fact = await getFacts();
+  console.log(fact);
+  let p = document.querySelector("#result");
+  p.innerText = fact;
+});
+
+async function getFacts(){
+  try{
+    let response = await axios.get(url);
+    return response.data.fact;
+  }catch (e){
+    console.log("error - ", e);
+    return "NO fact found";
+  }
+}
+
+
+
