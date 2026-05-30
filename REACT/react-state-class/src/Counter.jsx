@@ -1,10 +1,23 @@
-export default function Counter() {
-  let count = 0;
+import { useState } from "react";
+function init(){
+  return Math.random();
+}
 
-  function incCount() {
-    count += 1;
-    console.log(count);
-  }
+export default function Counter() {
+  let [count, setCount] = useState(init);  // initialization
+
+  let incCount = () => {
+    setCount((currCount) => {
+      return currCount + 1;
+    });
+    // setCount((currCount) => {
+    //   return currCount + 1;
+    // });
+
+    // setCount(34);
+    // setCount(count + 1);
+    // console.log(count);
+  };
 
   return (
     <div>
