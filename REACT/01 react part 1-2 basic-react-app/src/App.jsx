@@ -2,6 +2,8 @@ import "./App.css";
 import Title from "./Title.jsx";
 import ProductTab from "./ProductTab.jsx";
 import MsgBox from "./MsgBox.jsx";
+import Button from "./Button";
+import Form from "./Form";
 
 function Description() {
   return (
@@ -15,6 +17,8 @@ function Description() {
 function App() {
   return (
     <>
+      <Button />
+      <Form />
       <Title />
       <Description />
       <Title />
@@ -29,6 +33,7 @@ function App() {
     </>
   );
 }
+
 
 // // activity:
 // function App() {
