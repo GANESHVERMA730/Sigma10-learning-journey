@@ -64,6 +64,8 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -77,20 +79,24 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -112,7 +118,7 @@ code {
 
 
 /* CSS for Todo App */
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -121,34 +127,34 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+} */
 
 /* Main container */
-div {
+/* div {
   background: #ffffff;
   padding: 25px;
   border-radius: 12px;
   width: 380px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
+} */
 
 /* Input field */
-input {
+/* input {
   width: 70%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 8px;
   outline: none;
   transition: 0.3s;
-}
+} */
 
-input:focus {
+/* input:focus {
   border-color: #6c63ff;
   box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
-}
+} */
 
 /* Buttons */
-button {
+/* button {
   padding: 8px 12px;
   margin-left: 5px;
   margin-top: 5px;
@@ -164,10 +170,10 @@ button {
 button:hover {
   background: #574bdb;
   transform: scale(1.05);
-}
+} */
 
 /* Task list */
-ul {
+/* ul {
   padding: 0;
   margin-top: 15px;
 }
@@ -187,16 +193,16 @@ li {
 li:hover {
   background: #ecebff;
   transform: translateY(-2px);
-}
+} */
 
 /* Task text */
-span {
+/* span {
   flex: 1;
   font-size: 14px;
-}
+} */
 
 /* Done task style already handled inline, but enhance it */
-span[style] {
+/* span[style] {
   color: #888;
   transition: 0.3s;
-}
+} */
