@@ -21,28 +21,6 @@ A simple lottery game built using React. Players get a random ticket, and if the
 
 ---
 
-## Project Structure
-
-
-src/
-├── components/
-│ ├── lottery/
-│ │ ├── Lottery.jsx
-│ │ ├── Lottery.css
-│ │ ├── helper.js
-│ │
-│ ├── ticket/
-│ │ ├── Ticket.jsx
-│ │ ├── Ticket.css
-│ │ ├── TicketNum.jsx
-│ │ ├── TicketNum.css
-│
-├── App.jsx
-├── main.jsx
-
-
----
-
 ##  How to Run
 
 ```bash
