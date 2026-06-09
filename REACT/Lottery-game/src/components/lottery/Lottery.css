@@ -1,0 +1,48 @@
+
+/* Lottery.css */
+
+body {
+  background-color: #b80909;
+  font-family: Arial, sans-serif;
+}
+
+.Lottery {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+.Lottery h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.ticket {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.Lottery button {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcc00;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Lottery button:hover {
+  transform: scale(1.05);
+  background-color: #ffd633;
+}
+
+.Lottery h3 {
+  margin-top: 20px;
+  color: lightgreen;
+  font-size: 24px;
+}

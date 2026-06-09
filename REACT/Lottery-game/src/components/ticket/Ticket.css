@@ -1,0 +1,40 @@
+/* .Ticket{
+  border: 1px solid white;
+  border-radius: 12px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Ticket.css */
+
+.Ticket {
+  border: 2px solid white;
+  border-radius: 14px;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #28c504;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Ticket p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.TicketNum {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
