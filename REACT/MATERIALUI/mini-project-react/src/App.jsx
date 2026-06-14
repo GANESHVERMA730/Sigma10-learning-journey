@@ -2,7 +2,7 @@
 // import Button from '@mui/material/Button';
 // import DeleteIcon from '@mui/icons-material/Delete';
 // import Alert from '@mui/material/Alert';
-import SearchBox from "./SearchBox";
+import WeatherApp from "./weatherApp";
 
 function App() {
   // let handleClick = () => {
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-    <SearchBox />
+    <WeatherApp />
       {/* <h1>Material UI Demo</h1>
       <Button variant="contained" onClick={handleClick} >Contained</Button>
        <Button variant="outlined" disabled>Outlined</Button>
